@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Comparator Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div
+          class="drop-zone"
+          id="drop-zone1"
+          onclick="clickHandler(1)"
+          ondrop="dropHandler(event, 1)"
+          ondragover="dragOverHandler(event)"
+        >
+          <p>Click or Drop file 1 here</p>
+        </div>
+        <div
+          class="drop-zone"
+          id="drop-zone2"
+          onclick="clickHandler(2)"
+          ondrop="dropHandler(event, 2)"
+          ondragover="dragOverHandler(event)"
+        >
+          <p>Click or Drop file 2 here</p>
+        </div>
+      </div>
+      <div class="button-container">
+        <button onclick="compareFiles()">Compare Files</button>
+      </div>
+      <div id="output"></div>
+    </div>
+
+    <input
+      type="file"
+      id="fileInput"
+      style="display: none"
+      onchange="handleFileSelect(event)"
+    />
+    <script src="script.js"></script>
+  </body>
+</html>
